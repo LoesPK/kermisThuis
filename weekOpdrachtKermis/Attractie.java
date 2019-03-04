@@ -8,6 +8,7 @@ public class Attractie {
 	private double prijs;
 	private double oppervlakte;
 	private double kassa;
+	private int aantalKaartjes;
 	
 	ArrayList<Attractie> attracties = new ArrayList<Attractie>();
 	
@@ -26,6 +27,14 @@ public class Attractie {
 		this.prijs = prijs;
 	}
 	
+	String getNaam() {
+		return this.naam;
+	}
+	
+	double getKassa() {
+		return this.kassa;
+	}
+	
 	public double getPrijs() {
 		return this.prijs;
 	}
@@ -33,6 +42,10 @@ public class Attractie {
 	
 	String draaien(int i) {
 		this.kassa+=this.prijs;
-		return this.naam + " draait en heeft €" + this.kassa + " in de kassa";
+		this.aantalKaartjes++;
+		
+		
+		return this.naam + " draait en heeft "+ this.aantalKaartjes + " kaartjes verkocht en €" + this.kassa + " in de kassa.";
+		
 	}
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Prompter {
 	Scanner scanner = new Scanner(System.in);
 	int keuze;
-	
+	String omzetKaarten;
 	//------------welkomstbericht + menu------------//
 	int starten() {
 		
@@ -19,5 +19,11 @@ public class Prompter {
 		keuze = scanner.nextInt();
 		return keuze;
 	} 
+	
+	String kaartOfOmzet() {
+		System.out.println("Laat omzet (O) of verkochte kaartjes (K) zien van de kermis en haar attracties");
+		omzetKaarten = scanner.nextLine().toUpperCase();
+		return omzetKaarten;
+	}
 	
 }
