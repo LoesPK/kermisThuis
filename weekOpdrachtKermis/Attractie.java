@@ -45,11 +45,16 @@ public class Attractie {
 	}
 	
 	
-	String draaien(int i) {
+	String draaien(int i) throws Exception{
 		this.kassa+=this.prijs;
 		this.aantalKaartjes++;
-		
-
+		System.out.println(this.aantalKaartjes);// check voor draailimiet
+		if(attracties.get(i) instanceof RisicoVolleAttracties) {
+			System.out.println("check");
+			if(((RisicoVolleAttracties)attracties.get(i)).getKaartjes() > ((RisicoVolleAttracties)attracties.get(i)).draaiLimiet()) {
+				throw new Exception("dat kannie");
+			}
+		}
 		return this.naam + " draait";
 //				en heeft "+ this.aantalKaartjes + " kaartjes verkocht en €" + this.kassa + " in de kassa.";
 		

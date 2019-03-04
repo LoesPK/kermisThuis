@@ -12,7 +12,6 @@ public class Prompter {
 		String desc = "Wilt u een ritje maken in een attractie(A)"
 				+ " De omzet (O) zien van de kermis en alle attracties."
 				+ "Of de verkochte kaartjes (K) zien van de kermis en alle attracties.";
-		keuzeMaken();
 		return desc;
 	}
 	

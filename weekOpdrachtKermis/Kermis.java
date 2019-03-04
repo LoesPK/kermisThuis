@@ -21,8 +21,12 @@ public class Kermis {
 			prompter.keuzeMaken();
 			switch(prompter.keuzeStart) {
 				case "A": 
-				System.out.println(prompter.attractieRijden());
-				rijden();
+				int keuze = prompter.attractieRijden();
+				System.out.println(keuze);
+				
+					rijden();
+				
+
 				continue;
 				case "O": omzetTonen();
 				continue;
@@ -37,9 +41,13 @@ public class Kermis {
 	
 	
 	public void rijden() {
+		try {
 		System.out.println(attractie.attracties.get(prompter.keuze-1).draaien(prompter.keuze));
 		this.kassa += attractie.attracties.get(prompter.keuze-1).getPrijs();
 		this.aantalKaartjes++;
+		} catch (Exception e) {
+			System.out.println("te vaak");
+		}
 //		System.out.println("De kermis heeft in totaal " + this.aantalKaartjes + " kaartjes verkocht voor haar attracties en daarmee €" + this.kassa + " verdiend." );
 	}
 
