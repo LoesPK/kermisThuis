@@ -20,6 +20,7 @@ public class Attractie {
 		attracties.add(new Hawaii("Hawaii", 2.90));
 		attracties.add(new Hawaii("Ladderklimmen", 5.00));
 		
+		
 	}
 	
 	Attractie(String naam, double prijs){
@@ -39,13 +40,17 @@ public class Attractie {
 		return this.prijs;
 	}
 	
+	public int getKaartjes() {
+		return this.aantalKaartjes;
+	}
+	
 	
 	String draaien(int i) {
 		this.kassa+=this.prijs;
 		this.aantalKaartjes++;
-		
-		
-		return this.naam + " draait en heeft "+ this.aantalKaartjes + " kaartjes verkocht en €" + this.kassa + " in de kassa.";
+
+		return this.naam + " draait";
+//				en heeft "+ this.aantalKaartjes + " kaartjes verkocht en €" + this.kassa + " in de kassa.";
 		
 	}
 }

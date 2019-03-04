@@ -5,9 +5,18 @@ import java.util.Scanner;
 public class Prompter {
 	Scanner scanner = new Scanner(System.in);
 	int keuze;
-	String omzetKaarten;
+	String keuzeStart;
 	//------------welkomstbericht + menu------------//
-	int starten() {
+	
+	String starten() {
+		String desc = "Wilt u een ritje maken in een attractie(A)"
+				+ " De omzet (O) zien van de kermis en alle attracties."
+				+ "Of de verkochte kaartjes (K) zien van de kermis en alle attracties.";
+		
+		return desc;
+	}
+	
+	int attractieRijden() {
 		
 		System.out.println("Kies \n" +
 				"1. \tvoor botsauto's \t €2,50 \n" + 
@@ -20,10 +29,9 @@ public class Prompter {
 		return keuze;
 	} 
 	
-	String kaartOfOmzet() {
-		System.out.println("Laat omzet (O) of verkochte kaartjes (K) zien van de kermis en haar attracties");
-		omzetKaarten = scanner.nextLine().toUpperCase();
-		return omzetKaarten;
+	String keuzeMaken() {
+		keuzeStart = scanner.nextLine().toUpperCase();
+		return keuzeStart;
 	}
 	
 }
