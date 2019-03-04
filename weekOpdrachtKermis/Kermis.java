@@ -8,9 +8,10 @@ public class Kermis {
 	
 	public void kermisTonen() {
 		
+		System.out.println("welkom op de kermis");
 		attractie.attractieList();
 		for(Attractie a: attractie.attracties) {
-			if( a instanceof Risicovol) {
+			if( a instanceof RisicoVolleAttracties) {
 				System.out.println(a.getNaam() + " moet eerst een keuring hebben.");
 			}
 		}
@@ -21,12 +22,12 @@ public class Kermis {
 			switch(prompter.keuzeStart) {
 				case "A": 
 				System.out.println(prompter.attractieRijden());
-				keuzeMaken();
-				break;
+				rijden();
+				continue;
 				case "O": omzetTonen();
-				break;
+				continue;
 				case "K": kaartenTonen();
-				break;
+				continue;
 				default: System.out.println("maak een keuze");
 				break;
 			}
@@ -35,7 +36,7 @@ public class Kermis {
 	
 	
 	
-	public void keuzeMaken() {
+	public void rijden() {
 		System.out.println(attractie.attracties.get(prompter.keuze-1).draaien(prompter.keuze));
 		this.kassa += attractie.attracties.get(prompter.keuze-1).getPrijs();
 		this.aantalKaartjes++;

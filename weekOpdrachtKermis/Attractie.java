@@ -14,7 +14,7 @@ public class Attractie {
 	
 	void attractieList() {
 		attracties.add(new Botsauto("Botsauto's", 2.50));
-		attracties.add(new Spin("Spin", 2.25));
+		attracties.add(new Spin("De Spin", 2.25));
 		attracties.add(new Spiegelpaleis("Spiegelpaleis", 2.75));
 		attracties.add(new Spookhuis("Spookhuis", 3.20));
 		attracties.add(new Hawaii("Hawaii", 2.90));
@@ -48,6 +48,7 @@ public class Attractie {
 	String draaien(int i) {
 		this.kassa+=this.prijs;
 		this.aantalKaartjes++;
+		
 
 		return this.naam + " draait";
 //				en heeft "+ this.aantalKaartjes + " kaartjes verkocht en €" + this.kassa + " in de kassa.";
