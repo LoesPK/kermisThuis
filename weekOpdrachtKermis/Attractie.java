@@ -3,6 +3,7 @@ package weekOpdrachtKermis;
 import java.util.ArrayList;
 
 public class Attractie {
+	Prompter prompter = new Prompter();
 	private String naam;
 	private double prijs;
 	private double oppervlakte;
@@ -30,8 +31,8 @@ public class Attractie {
 	}
 	
 	
-	String draaien() {
+	String draaien(int i) {
 		this.kassa+=this.prijs;
-		return this.naam + " draait en heeft " + this.kassa + " geld in de kassa";
+		return this.naam + " draait en heeft €" + this.kassa + " in de kassa";
 	}
 }
